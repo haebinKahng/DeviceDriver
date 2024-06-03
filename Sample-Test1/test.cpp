@@ -1,6 +1,13 @@
-#include "pch.h"
+#include "gtest/gtest.h"
+#include "gmock/gmock.h"
+#include "../Project1/DeviceDriver.cpp"
 
-TEST(TestCaseName, TestName) {
-  EXPECT_EQ(1, 1);
-  EXPECT_TRUE(true);
+using namespace ::testing;
+
+TEST(DeviceDriver, read1) {
+	EXPECT_THAT(1, Eq(1));
+}
+
+TEST(DeviceDriver, read2) {
+	EXPECT_THAT(1, Eq(1));
 }
