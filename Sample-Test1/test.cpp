@@ -81,9 +81,9 @@ TEST_F(AppFixture, App1) {
 	DeviceDriver dd{ &fMock };
 	Application app{ &dd };
 
-	//5개 address 읽고,
-	//한 address read 5번씩
-	//총 25회 read
+	//Read 5 address 
+	//each address each read 5 times
+	//total 25 read
 	EXPECT_CALL(fMock, read)
 		.Times(25);
 
@@ -96,9 +96,9 @@ TEST_F(AppFixture, App2) {
 	DeviceDriver dd{ &fMock };
 	Application app{ &dd };
 
-	//5개 address 읽고,
-	//한 address read 5번씩
-	//총 25회 read
+	//Read 5 address 
+	//each address each read 5 times
+	//total 25 read
 	EXPECT_CALL(fMock, read)
 		.Times(5)
 		.WillRepeatedly(Return(0xFF));
