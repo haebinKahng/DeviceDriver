@@ -9,4 +9,8 @@ public:
 
 protected:
     FlashMemoryDevice* m_hardware;
+
+private:
+    void checkvalue(int result, long address);
+    void checkpage(long address);
 };
